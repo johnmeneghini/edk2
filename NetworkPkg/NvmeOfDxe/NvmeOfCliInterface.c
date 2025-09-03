@@ -1441,7 +1441,7 @@ NvmeOfCliProbeControllers (
   if (spdk_nvme_probe (
         Trid,
         Private,
-        NvmeOfCliProbeCallback,
+        (spdk_nvme_probe_cb) NvmeOfCliProbeCallback,
         NvmeOfAttachCliCallback,
         NULL
         ) != 0)

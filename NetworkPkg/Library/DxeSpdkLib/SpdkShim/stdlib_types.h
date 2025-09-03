@@ -31,8 +31,11 @@ typedef UINT8  uint8_t;
 typedef UINT16 uint16_t;
 typedef UINT32 uint32_t;
 typedef UINT64 uint64_t;
-
-typedef BOOLEAN bool;
+#if defined __STDC_VERSION__ && __STDC_VERSION__ > 201710L
+/* bool, true and false are keywords.  */
+#else
+ typedef BOOLEAN bool;
+#endif
 
 #ifndef _MSC_VER
 typedef long unsigned int size_t;

@@ -506,7 +506,7 @@ NvmeOfProbeControllers (
   if (spdk_nvme_probe (
         Trid,
         Private,
-        NvmeOfProbeCallback,
+        (spdk_nvme_probe_cb) NvmeOfProbeCallback,
         NvmeOfAttachCallback,
         NULL
         ) != 0)
