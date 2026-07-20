@@ -645,7 +645,6 @@ NvmeOfCliSetAttempt (
   BOOLEAN                       Ascii         = TRUE;
   BOOLEAN                       Flag          = TRUE;
   UINTN                         Size          = LINE_MAX;
-  UINTN                         LineNo        = 0;
   CHAR8                         *EndPointer   = NULL;
   UINT8                         IndexTag      = 0;
   CHAR16                        *FileName     = NULL;
@@ -739,7 +738,6 @@ NvmeOfCliSetAttempt (
     {
       continue;
     } else {
-      LineNo++;
       Line        = &Line1[0];
       ReadLineTag = Line;
       IndexTag    = 0;
